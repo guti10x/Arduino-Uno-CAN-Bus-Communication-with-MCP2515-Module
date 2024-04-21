@@ -5,6 +5,22 @@ Este proyecto muestra cómo establecer comunicación a través del bus CAN (Cont
 ## Esquema de conexiones:
 ![a61bda7ea69d0927d32fc2bce608ccd74cd039e1_2_1035x471](https://github.com/guti10x/Arduino-Uno-CAN-Bus-Communication-with-MCP2515-Module/assets/82153822/95fdf590-1b63-4889-aad1-077641809985)
 
+##Explicación de las funcionalidades de cada pin
+
+- **VCC (Voltaje de Alimentación):** Este pin proporciona el voltaje de alimentación necesario para el funcionamiento del MCP2515.
+
+- **GND (Tierra):** Este pin es el punto de referencia común de voltaje para el circuito.
+
+- **CS (Chip Select):** Controla el inicio y la finalización de la comunicación SPI. Se activa (bajo) por el microprocesador para iniciar la comunicación.
+
+- **SO (Serial Output):** Envia datos en serie desde el MCP2515 al microprocesador.
+
+- **SI (Serial Input):** Recibe datos en serie del microprocesador al MCP2515.
+
+- **SCK (Serial Clock):** Sincroniza la transferencia de datos entre el microprocesador y el MCP2515 durante la comunicación SPI.
+
+- **INT (Interrupción):** Notifica al microprocesador sobre eventos importantes en el MCP2515, como la recepción de un mensaje CAN o la detección de un error de comunicación.
+
 ## Bibliotecas necesarias
 Para este proyecto, se utilizan las siguientes bibliotecas:
 ```cpp
