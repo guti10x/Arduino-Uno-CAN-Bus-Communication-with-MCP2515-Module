@@ -5,7 +5,7 @@ Este proyecto muestra cómo establecer comunicación a través del bus CAN (Cont
 ## Esquema de conexiones:
 ![a61bda7ea69d0927d32fc2bce608ccd74cd039e1_2_1035x471](https://github.com/guti10x/Arduino-Uno-CAN-Bus-Communication-with-MCP2515-Module/assets/82153822/95fdf590-1b63-4889-aad1-077641809985)
 
-## Explicación de las funcionalidades de cada pin
+## Explicación de cada pin
 
 - **VCC (Voltaje de Alimentación):** Es el encargado de proporcionar voltaje al MCP2515.
 
