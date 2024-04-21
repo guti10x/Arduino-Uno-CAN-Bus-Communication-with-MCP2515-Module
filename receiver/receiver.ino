@@ -21,6 +21,7 @@ void loop() {
   // Verificar si hay mensajes recibidos
   if(can.checkReceive() == CAN_MSGAVAIL) {
     // Leer el mensaje recibido
+    // Crea las variables
     unsigned char len;
     unsigned char buf[11];
     unsigned long canId;
