@@ -22,7 +22,7 @@ void setup() {
 void loop() {
   // Crear el mensaje a enviar
   unsigned char msgData[] = {'H', 'E', 'L', 'L', 'O', '', 'W', 'O', 'R', 'L', 'D'};
-  unsigned char len = sizeof(msgData) / sizeof(msgData[0]);  // Calcula la longitud del mensaje
+  unsigned char len = sizeof(msgData) / sizeof(msgData[0]);  // Calcula el número de elementos en el array
   
   // Enviar el mensaje a través del bus CAN
   can.sendMsgBuf(0x123, 0, len, msgData);
