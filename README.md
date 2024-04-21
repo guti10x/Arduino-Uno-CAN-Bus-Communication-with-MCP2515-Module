@@ -5,21 +5,21 @@ Este proyecto muestra cómo establecer comunicación a través del bus CAN (Cont
 ## Esquema de conexiones:
 ![a61bda7ea69d0927d32fc2bce608ccd74cd039e1_2_1035x471](https://github.com/guti10x/Arduino-Uno-CAN-Bus-Communication-with-MCP2515-Module/assets/82153822/95fdf590-1b63-4889-aad1-077641809985)
 
-##Explicación de las funcionalidades de cada pin
+## Explicación de las funcionalidades de cada pin
 
-- **VCC (Voltaje de Alimentación):** Este pin proporciona el voltaje de alimentación necesario para el funcionamiento del MCP2515.
+- **VCC (Voltaje de Alimentación):** Es el encargado de proporcionar voltaje al MCP2515.
 
-- **GND (Tierra):** Este pin es el punto de referencia común de voltaje para el circuito.
+- **GND (Tierra):** Es el punto de referencia para medir los voltajes en relación con otros puntos del circuito.
 
-- **CS (Chip Select):** Controla el inicio y la finalización de la comunicación SPI. Se activa (bajo) por el microprocesador para iniciar la comunicación.
+- **CS (Chip Select):** Establece el inicio y la finalización de la comunicación SPI. Puede estar activo (bajo) o desactivado (alto). Es el microprocesador quien activa el pin CS si quiere enviar o recibir información.
 
-- **SO (Serial Output):** Envia datos en serie desde el MCP2515 al microprocesador.
+- **SO (Serial Output):** Es el pin encargado de enviar datos en serie al microprocesador.
 
-- **SI (Serial Input):** Recibe datos en serie del microprocesador al MCP2515.
+- **SI (Serial Input):** Es el pin encargado de recibir datos en serie del microprocesador.
 
-- **SCK (Serial Clock):** Sincroniza la transferencia de datos entre el microprocesador y el MCP2515 durante la comunicación SPI.
+- **SCK (Serial Clock):** Es el pin encargado de sincronizar la transferencia de datos entre el micro y el MCP2515. Cuando se inicia la comunicación, el microprocesador genera un tren de pulsos de reloj a través de este pin para sincronizar la transferencia.
 
-- **INT (Interrupción):** Notifica al microprocesador sobre eventos importantes en el MCP2515, como la recepción de un mensaje CAN o la detección de un error de comunicación.
+- **INT (Interrupción):** Notifica al microprocesador sobre eventos importantes que han ocurrido dentro del MCP2515, como la recepción de un mensaje CAN, la detección de un error de comunicación, etc. El MCP2515 genera una interrupción en el pin INT cuando detecta estos eventos. Esta interrupción interrumpe la ejecución normal del microprocesador para alertarlo sobre la ocurrencia del evento. Posteriormente, el microprocesador puede decidir cómo responder a esta notificación.
 
 ## Bibliotecas necesarias
 Para este proyecto, se utilizan las siguientes bibliotecas:
