@@ -22,7 +22,7 @@ void loop() {
   if(can.checkReceive() == CAN_MSGAVAIL) {
     // Leer el mensaje recibido
     unsigned char len;
-    unsigned char buf[8];
+    unsigned char buf[11];
     unsigned long canId;
     
     can.readMsgBuf(&len, buf);  // Lee el mensaje del buffer del MCP2515
